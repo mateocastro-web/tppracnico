@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Vehículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="logo" href="index.html">REGISTRO</a>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="conductores.html">Registrar Conductor</a>
+        <a href="vehiculos.html">Registrar Vehículo</a>
+        <a href="ver_conductores.html">Ver Conductores</a>
+        <a href="ver_vehiculos.html">Ver Vehículos</a>
+    </div>
+</nav>
+
+<main class="contenido_principal">
+    <h1>REGISTRAR VEHÍCULO</h1>
+
+    <div class="formulario">
+        <label for="marca">Marca</label>
+        <input type="text" id="marca" placeholder="Ej: Honda">
+
+        <label for="modelo">Modelo</label>
+        <input type="text" id="modelo" placeholder="Ej: Wave">
+
+        <label for="patente">Patente</label>
+        <input type="text" id="patente" placeholder="Ej: AB123CD">
+
+        <label for="tipo">Tipo</label>
+        <select id="tipo">
+            <option value="">Seleccionar</option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+        </select>
+
+        <div class="grupo_botones">
+            <button class="guardar" onclick="guardarVehiculo()">GUARDAR</button>
+            <button class="borrar" onclick="limpiarFormularioVehiculo()">BORRAR</button>
+        </div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

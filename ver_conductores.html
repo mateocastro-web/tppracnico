@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conductores Registrados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="logo" href="index.html">REGISTRO</a>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="conductores.html">Registrar Conductor</a>
+        <a href="vehiculos.html">Registrar Vehículo</a>
+        <a href="ver_conductores.html">Ver Conductores</a>
+        <a href="ver_vehiculos.html">Ver Vehículos</a>
+    </div>
+</nav>
+
+<main class="contenido_principal">
+    <h1>CONDUCTORES REGISTRADOS</h1>
+
+    <p class="aclaracion">Elegí un solo filtro. No se pueden combinar.</p>
+
+    <div class="filtros">
+        <div>
+            <label for="filtroSeguro">Filtrar por seguro</label>
+            <select id="filtroSeguro" onchange="mostrarConductores()">
+                <option value="TODOS">Todos</option>
+                <option value="SI">Con seguro</option>
+                <option value="NO">Sin seguro</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="filtroCarnet">Filtrar por carnet</label>
+            <select id="filtroCarnet" onchange="mostrarConductores()">
+                <option value="TODOS">Todos</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="resultados_conductores"></div>
+
+    <button class="borrar" onclick="borrarConductores()">BORRAR TODOS LOS CONDUCTORES</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

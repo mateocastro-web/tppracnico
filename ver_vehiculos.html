@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehículos Registrados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="logo" href="index.html">REGISTRO</a>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="conductores.html">Registrar Conductor</a>
+        <a href="vehiculos.html">Registrar Vehículo</a>
+        <a href="ver_conductores.html">Ver Conductores</a>
+        <a href="ver_vehiculos.html">Ver Vehículos</a>
+    </div>
+</nav>
+
+<main class="contenido_principal">
+    <h1>VEHÍCULOS REGISTRADOS</h1>
+
+    <p class="aclaracion">Elegí un solo filtro. No se pueden combinar.</p>
+
+    <div class="filtros">
+        <div>
+            <label for="filtroMarca">Filtrar por marca</label>
+            <input type="text" id="filtroMarca" placeholder="Escribí una marca" oninput="mostrarVehiculos()">
+        </div>
+
+        <div>
+            <label for="filtroTipo">Filtrar por tipo</label>
+            <select id="filtroTipo" onchange="mostrarVehiculos()">
+                <option value="TODOS">Todos</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="resultados_vehiculos"></div>
+
+    <button class="borrar" onclick="borrarVehiculos()">BORRAR TODOS LOS VEHÍCULOS</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

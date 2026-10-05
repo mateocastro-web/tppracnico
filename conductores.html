@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Conductor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="logo" href="index.html">REGISTRO</a>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="conductores.html">Registrar Conductor</a>
+        <a href="vehiculos.html">Registrar Vehículo</a>
+        <a href="ver_conductores.html">Ver Conductores</a>
+        <a href="ver_vehiculos.html">Ver Vehículos</a>
+    </div>
+</nav>
+
+<main class="contenido_principal">
+    <h1>REGISTRAR CONDUCTOR</h1>
+
+    <div class="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Ingresá el nombre">
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" placeholder="Ingresá la edad">
+
+        <label for="carnet">Tipo de carnet</label>
+        <select id="carnet">
+            <option value=""></option>
+            <option value="A1">A1</option>
+            <option value="A2">A2</option>
+            <option value="A3">A3</option>
+        </select>
+
+        <label for="seguro">¿Tiene seguro?</label>
+        <select id="seguro">
+            <option value=""></option>
+            <option value="SI">SI</option>
+            <option value="NO">NO</option>
+        </select>
+
+        <div class="grupo_botones">
+            <button class="guardar" onclick="guardarConductor()">GUARDAR</button>
+            <button class="borrar" onclick="limpiarFormularioConductor()">BORRAR</button>
+        </div>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
